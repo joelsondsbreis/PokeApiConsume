@@ -1,0 +1,23 @@
+<h1>Tipos</h1>
+<div class="ui-g">
+  <div
+    class="ui-g-12 ui-md-6 ui-lg-4"
+    *ngFor="let item of types"
+  >
+    <p-card
+      [header]="item.name"
+      [style]="{width: '360px'}"
+    >
+      <p-footer>
+        <button
+          pButton
+          type="button"
+          label="Ver Pokemons"
+          icon="pi pi-check"
+          (click)="getPokemons(item.url)"
+          style="margin-right: .25em"
+        ></button>
+      </p-footer>
+    </p-card>
+  </div>
+</div>
